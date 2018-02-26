@@ -12,10 +12,7 @@
 	  
 		if(typeof window.innerWidth != 'undefined') {
 			var w = window.innerWidth;
-			if (w < bp.smartphone) wojd = "smartphone";
-			else if (w < bp.desktop) wojd = "tablet";
-			else if (w >= bp.desktop) wojd = "desktop";
-			else wojd = "";
+			wojd = (w < bp.smartphone) ? "smartphone" : ((w < bp.desktop) ? "tablet" : ((w >= bp.desktop) ? "desktop" : ""));
 		}
 
 		tag.page.set({
